@@ -11,10 +11,10 @@ class menuScene extends Phaser.Scene{
     }
 
     create(){
-        const playButton = this.add.image(250,300,'play');
+        const playButton = this.add.image(400,300,'play').setScale(0.5);
         playButton.setInteractive();
         playButton.on('pointerdown', () => {this.scene.start('level1')});
-        const creditButton = this.add.image(300,450,'creditsButton');
+        const creditButton = this.add.image(400,420,'creditsButton').setScale(0.5);
         creditButton.setInteractive();
         creditButton.on('pointerdown', () => {this.scene.start('credits')});
 
