@@ -6,8 +6,8 @@ class menuScene extends Phaser.Scene{
     preload(){
         //add credits image
         //add exit button
-        this.load.image('play','assets/misc/test.png');
-        this.load.image('creditsButton','assets/misc/testCredit.png');
+        this.load.image('play','assets/misc/play.png');
+        this.load.image('creditsButton','assets/misc/credits.png');
         this.load.image('menuBackground', 'assets/background/bg.png');
 
     }
