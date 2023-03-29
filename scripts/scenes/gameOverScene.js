@@ -6,13 +6,15 @@ class gameOverScene extends Phaser.Scene{
     preload(){
         //add restart button
         //add exit button.
-        this.load.image('reset','assets/misc/reset.png');
-        this.load.image('return','assets/misc/exitbutton.png');
+        this.load.image('reset','assets/misc/playAgain.png');
+        this.load.image('return','assets/misc/exit.png');
+        this.load.image('overBg', 'assets/background/bg.png');
     }
     create() {
         const playerScore = score;
         const playerBoxCollected = boxCollected;
 
+        this.add.image(400, 300, 'overBg');
         const gameOverText = this.add.text(400, 200, 'Game Over!\nScore:'+ playerScore + '\nBox Collected:' + playerBoxCollected, {
             fontFamily: 'Arial',
             fontSize: '32px',
@@ -20,11 +22,12 @@ class gameOverScene extends Phaser.Scene{
         });
         gameOverText.setOrigin(0.5);
 
-        const resetButton = this.add.image(250,400,'reset').setScale(.2);
+        const resetButton = this.add.image(300,400,'reset').setScale(.4);
         resetButton.setInteractive();
-        resetButton.on('pointerdown', () => {this.scene.start('level1')});
-        
-        const returnMainMenu = this.add.image(400,400,'return').setScale(.2);
+        resetButton.on('pointerdown', () => { this.scene.start('level1');
+        score = 0;
+        boxCollected = 0;});
+        const returnMainMenu = this.add.image(500,400,'return').setScale(.4);
         returnMainMenu.setInteractive();
         returnMainMenu.on('pointerdown', () => {this.scene.start('menuScene')});
     }

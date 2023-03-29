@@ -28,7 +28,6 @@ preload ()
 
 create ()
 {
-
     this.add.image(400, 300, 'bg');
 
     platforms = this.physics.add.staticGroup();
@@ -98,7 +97,6 @@ create ()
     this.physics.add.collider(player, platforms);
     this.physics.add.collider(box, platforms);
     this.physics.add.collider(bombs, platforms);
-
  
     this.physics.add.overlap(player, box, collectStar, playerColors, null, this);
 
