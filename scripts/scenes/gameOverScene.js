@@ -24,7 +24,7 @@ class gameOverScene extends Phaser.Scene{
 
         const resetButton = this.add.image(300,400,'reset').setScale(.4);
         resetButton.setInteractive();
-        resetButton.on('pointerdown', () => { this.scene.start('level1');
+        resetButton.on('pointerdown', () => {this.scene.start('level1');
         score = 0;
         boxCollected = 0;});
         const returnMainMenu = this.add.image(500,400,'return').setScale(.4);

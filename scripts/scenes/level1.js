@@ -4,7 +4,6 @@ var bombs;
 var platforms;
 var cursors;
 var score = 0;
-
 var scoreText;
 var boxCollected = 0;
 var boxScoreText;
