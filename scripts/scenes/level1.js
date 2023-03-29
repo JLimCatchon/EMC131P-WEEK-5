@@ -84,16 +84,6 @@ create ()
     scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
     boxScoreText = this.add.text(420, 16, 'Box Collected: 0', { fontSize: '32px', fill: '#000' });
 
-    this.lostTextBox = this.add.text(400, 250, 'Game Over!\nScore: 0 \nBox Collected: 0', {
-        fontSize: '32px',
-        fill: '#00CED1',
-        align: 'center'
-        });
-    this.lostTextBox.setOrigin(0.5);
-    this.lostTextBox.visible = false;      
-    
-
- 
     this.physics.add.collider(player, platforms);
     this.physics.add.collider(box, platforms);
     this.physics.add.collider(bombs, platforms);
