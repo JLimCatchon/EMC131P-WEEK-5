@@ -62,7 +62,6 @@ create ()
         repeat: -1
     });
 
-  
     cursors = this.input.keyboard.createCursorKeys();
 
     box = this.physics.add.group({
@@ -78,7 +77,6 @@ create ()
 
     bombs = this.physics.add.group();
 
- 
     scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
     boxScoreText = this.add.text(420, 16, 'Box Collected: 0', { fontSize: '32px', fill: '#000' });
 
