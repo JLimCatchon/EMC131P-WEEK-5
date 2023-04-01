@@ -4,7 +4,7 @@ class creditScene extends Phaser.Scene{
         
     }
     preload(){
-        //add return button to menuScene
+   
         this.load.image('return','assets/misc/exitbutton.png');
         this.load.image('crd','assets/background/credits.png');
         

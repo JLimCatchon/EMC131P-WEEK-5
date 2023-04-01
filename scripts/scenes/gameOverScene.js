@@ -8,13 +8,13 @@ class gameOverScene extends Phaser.Scene{
         //add exit button.
         this.load.image('reset','assets/misc/playAgain.png');
         this.load.image('return','assets/misc/exit.png');
-        this.load.image('overBg', 'assets/background/bg.png');
+        this.load.image('gameOverBg', 'assets/background/bg.png');
     }
     create() {
         const playerScore = score;
         const playerBoxCollected = boxCollected;
 
-        this.add.image(400, 300, 'overBg');
+        this.add.image(400, 300, 'gameOverBg');
         const gameOverText = this.add.text(400, 200, 'Game Over!\nScore:'+ playerScore + '\nBox Collected:' + playerBoxCollected, {
             fontFamily: 'Arial',
             fontSize: '32px',

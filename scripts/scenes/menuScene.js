@@ -10,7 +10,6 @@ class menuScene extends Phaser.Scene{
         this.load.image('menuBackground', 'assets/background/bg.png');
         this.load.image('exitMain', 'assets/misc/exitmain.png');
 
-
     }
 
     create(){
@@ -28,7 +27,6 @@ class menuScene extends Phaser.Scene{
         const exitGame = this.add.image(400,450,'exitMain').setScale(.5);
         exitGame.setInteractive();
         exitGame.on('pointerdown', () => {alert('Game Exited')});
-
 
     }
 
