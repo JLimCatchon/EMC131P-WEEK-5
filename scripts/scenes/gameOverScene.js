@@ -4,11 +4,11 @@ class gameOverScene extends Phaser.Scene{
 
     }
     preload(){
-        //add restart button
-        //add exit button.
+     
         this.load.image('reset','assets/misc/playAgain.png');
         this.load.image('return','assets/misc/exit.png');
         this.load.image('gameOverBg', 'assets/background/bg.png');
+        
     }
     create() {
         const playerScore = score;
